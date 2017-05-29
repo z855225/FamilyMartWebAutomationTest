@@ -19,11 +19,10 @@ import org.testng.annotations.AfterTest;
 
 public class WebCheckoutTest {
 	
-	public static WebDriver driver;
-	public static ExtentReports report;
-	public static ExtentTest test;
-	
-	
+    public static WebDriver driver;
+    public static ExtentReports report;
+    public static ExtentTest test;
+
     @BeforeTest
     public void beforeTest() throws InterruptedException {
     	report = new ExtentReports("/Users/River_Lin/Documents/workspace/testreport/FamilyMartWebReport.html", false);
@@ -73,8 +72,7 @@ public class WebCheckoutTest {
 	    	FamilyMartStorePage.selectStoreByStreet(driver);
 	    	
 	    	PaymentInfoPage.enterEmail(driver, "rivertest62@gmail.com");
-	    	
-	    	
+	    		
 	    	test.log(LogStatus.PASS, "The Test Result: PASS");
 	        Thread.sleep(1000);
 	        String fileDir = Actions.takeScreenShot(driver);
