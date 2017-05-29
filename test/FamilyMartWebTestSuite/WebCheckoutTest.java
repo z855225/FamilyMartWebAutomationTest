@@ -84,7 +84,7 @@ public class WebCheckoutTest {
 	    	  test.log(LogStatus.FAIL, e.getMessage());
 	    	  String fileDir = Actions.takeScreenShot(driver);
 	    	  test.log(LogStatus.INFO, "error image: " +  test.addScreenCapture(fileDir));
-	    }
+	}
     }
   
     @AfterTest
