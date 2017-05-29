@@ -78,7 +78,7 @@ public class WebCheckoutTest {
 	    	test.log(LogStatus.PASS, "The Test Result: PASS");
 	        Thread.sleep(1000);
 	        String fileDir = Actions.takeScreenShot(driver);
-		    test.log(LogStatus.INFO, "image: " +  test.addScreenCapture(fileDir));
+		test.log(LogStatus.INFO, "image: " +  test.addScreenCapture(fileDir));
     	}
 
     	catch(Exception e) {
@@ -86,14 +86,13 @@ public class WebCheckoutTest {
 	    	  test.log(LogStatus.FAIL, e.getMessage());
 	    	  String fileDir = Actions.takeScreenShot(driver);
 	    	  test.log(LogStatus.INFO, "error image: " +  test.addScreenCapture(fileDir));
-
 	    }
     }
   
     @AfterTest
     public void afterTest() {
     	report.endTest(test);
-		report.flush();
+	report.flush();
     	driver.close();
     }
 
